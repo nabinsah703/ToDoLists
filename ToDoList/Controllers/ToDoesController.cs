@@ -113,10 +113,6 @@ namespace ToDoList.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            else
-            {
-
-            }
             return View(toDo);
         }
 

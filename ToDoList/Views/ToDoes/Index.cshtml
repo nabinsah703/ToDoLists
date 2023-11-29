@@ -9,6 +9,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <div id="tableDiv"></div>
+
 <div id="todoCreateFrom">
     @using (Ajax.BeginForm("AJAXCreate", "ToDoes", new AjaxOptions
     {
@@ -31,5 +32,5 @@
 @section Scripts {
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Common_Script/BuildTable.js"></script>
-    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval");
     }

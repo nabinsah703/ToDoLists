@@ -125,6 +125,27 @@ namespace ToDoList.Controllers
             return View(toDo);
         }
 
+        [HttpPost]
+        public ActionResult AJAXEdit(int? id, bool value)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ToDo toDo = db.ToDos.Find(id);
+            if (toDo == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                toDo.IsDone = value;
+                db.Entry(toDo).State |= EntityState.Modified;
+                db.SaveChanges();
+                return PartialView("_ToDoTable", GetMyToDoes());
+            }
+        }
+
         // GET: ToDoes/Delete/5
         public ActionResult Delete(int? id)
         {

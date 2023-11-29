@@ -106,3 +106,5 @@ C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.Core
 C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CopyComplete
 C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.dll
 C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.pdb
+C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.Migrations.ToDo1.resources
+C:\Users\Navin Sah\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.GenerateResource.cache

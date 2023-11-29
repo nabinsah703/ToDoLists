@@ -25,6 +25,8 @@ namespace ToDoList.Models
         {
         }
 
+        public DbSet<ToDo> ToDos { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

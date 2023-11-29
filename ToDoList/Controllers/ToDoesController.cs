@@ -27,7 +27,16 @@ namespace ToDoList.Controllers
         {
             string currentUserId = User.Identity.GetUserId();
             ApplicationUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
-            return db.ToDos.ToList().Where(x => x.User == currentUser);
+            IEnumerable<ToDo> myToDoes = db.ToDos.ToList().Where(x => x.User == currentUser);
+
+            int completedCount = 0;
+            
+            foreach(ToDo toDo in myToDoes)
+            {
+                if(toDo.IsDone) completedCount++;
+            }
+            ViewBag.Percent = Math.Round(100f * (float)completedCount / (float)myToDoes.Count());
+            return myToDoes;
 
         }
         public ActionResult BuildToDoTable()

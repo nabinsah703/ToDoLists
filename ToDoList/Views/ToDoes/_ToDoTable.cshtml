@@ -1,13 +1,18 @@
 ﻿@model IEnumerable<ToDoList.Models.ToDo>
 
-
+<div id="progressBarToDo">
+    <p> @(ViewBag.Percent)%</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width:@(Html.AttributeEncode(ViewBag.Percent))%"></div>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-           
+            @Html.DisplayNameFor(model => model.IsDone)
         </th>
         <th></th>
     </tr>
